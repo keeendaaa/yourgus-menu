@@ -173,7 +173,7 @@ export default function MenuScreenNew({ menuItems }: MenuScreenNewProps) {
       transition={{ duration: 0.3 }}
     >
       {/* Header */}
-      <div className="sticky top-0 z-40 bg-white pt-6 px-4 pb-2 shadow-md border-b border-amber-100">
+      <div className="bg-white pt-6 px-4 pb-2 shadow-md border-b border-amber-100">
         <div className="text-center mb-4">
           <h1 className="mb-2 text-2xl font-bold text-amber-900" style={{ fontFamily: 'serif' }}>
             Йоргос Греческая Таверна

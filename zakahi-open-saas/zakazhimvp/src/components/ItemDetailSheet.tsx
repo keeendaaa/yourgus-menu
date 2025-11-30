@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { MenuItem } from '../types';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { ArrowLeft, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent } from './ui/sheet';
 import { motion, AnimatePresence } from 'motion/react';
@@ -66,21 +66,21 @@ export default function ItemDetailSheet({
               ease: "easeInOut"
             }}
           >
-        {/* Header with back button, price and volume */}
+        {/* Header with price and close button */}
         <div className="sticky top-0 z-20 bg-white/95 backdrop-blur-sm border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-          {/* Back button - left side */}
-          <button
-            onClick={onClose}
-            className="rounded-full bg-white/90 backdrop-blur-sm p-2 hover:bg-white transition-colors shadow-lg mr-3 flex-shrink-0"
-            aria-label="Назад"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-          
-          {/* Price - right side */}
-          <div className="flex-1 text-right">
+          {/* Price - left side */}
+          <div className="flex-1">
             <span className="text-2xl font-bold text-amber-700">{item.price} ₽</span>
           </div>
+          
+          {/* Close button - right side */}
+          <button
+            onClick={onClose}
+            className="rounded-full bg-white/90 backdrop-blur-sm p-2 hover:bg-white transition-colors shadow-lg ml-3 flex-shrink-0"
+            aria-label="Закрыть"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
 
         {/* Main item name */}
